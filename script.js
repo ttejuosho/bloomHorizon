@@ -16,6 +16,84 @@ if (tableContainer) {
 
 // Tab switching functionality
 document.addEventListener("DOMContentLoaded", () => {
+  // Handle service request form submission
+  const serviceForm = document.getElementById("serviceForm");
+  if (serviceForm) {
+    serviceForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(serviceForm);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch("https://formspree.io/f/xjvnqplb", {
+          // Replace with your Formspree ID
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...data,
+            _subject: "New Service Request from Bloom Horizon Website",
+            _replyto: data["service-email"],
+            _to: "support@bloomhorizonservices.com",
+          }),
+        });
+
+        if (response.ok) {
+          alert("Thank you! Your service request has been submitted.");
+          serviceForm.reset();
+        } else {
+          throw new Error("Form submission failed");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert(
+          "There was an error submitting your request. Please try again later."
+        );
+      }
+    });
+  }
+
+  // Handle contact form submission
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch("https://formspree.io/f/xjvnqplb", {
+          // Replace with your Formspree ID
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...data,
+            _subject: "New Contact Form Submission from Bloom Horizon Website",
+            _replyto: data.email,
+            _to: "support@bloomhorizonservices.com",
+          }),
+        });
+
+        if (response.ok) {
+          alert("Thank you! Your message has been sent.");
+          contactForm.reset();
+        } else {
+          throw new Error("Form submission failed");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert(
+          "There was an error sending your message. Please try again later."
+        );
+      }
+    });
+  }
+
   const tabButtons = document.querySelectorAll(".tab-button");
   const tabContents = document.querySelectorAll(".tab-content");
 
