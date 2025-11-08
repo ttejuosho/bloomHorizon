@@ -88,13 +88,13 @@
       </section>
 
       <!-- Service Request Section -->
-      <section id="service-request" class="service-request-section mb-20">
+      <section id="serviceRequestSection" class="service-request-section mb-20">
         <div class="bg-white rounded-xl shadow-md overflow-hidden">
           <div class="p-8 md:p-12">
             <h2 class="text-3xl font-bold text-green-800 mb-6">
               Service Request
             </h2>
-            <form id="serviceForm" class="space-y-6">
+            <form id="serviceRequestForm" class="space-y-6">
               <div>
                 <label for="service-name" class="block text-gray-700 mb-2"
                   >Full Name</label
@@ -263,10 +263,11 @@
 
               <button
                 type="submit"
-                class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 w-full"
+                class="service-request-form-submit-btn bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 w-full"
               >
                 Submit Request
               </button>
+              <div id="serviceRequestFormStatus" class="sr-form-status"></div>
             </form>
           </div>
         </div>
@@ -315,8 +316,9 @@
           </div>
         </div>
       </section>
+
       <!-- Contact Section -->
-      <section id="contact" class="contact-section mb-20">
+      <section id="contactSection" class="contact-section mb-20">
         <div class="bg-white rounded-xl shadow-md overflow-hidden">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <!-- Contact Form -->
@@ -372,10 +374,11 @@
                 </div>
                 <button
                   type="submit"
-                  class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 w-full"
+                  class="contact-form-submit-btn bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 w-full"
                 >
                   Send Message
                 </button>
+                <div id="formStatus" class="form-status"></div>
               </form>
             </div>
 

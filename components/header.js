@@ -92,10 +92,10 @@ class CustomHeader extends HTMLElement {
           <i class="fas fa-bars"></i>
         </button>
         <div class="nav-links" id="navLinks">
-          <a href="#services">Services</a>
+          <a href="#serviceRequestSection">Services</a>
           <a href="#about">About</a>
-          <a href="#contact" class="active">Contact</a>
-          <a href="#quote" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Get Quote</a>
+          <a href="#contactSection" class="active">Contact</a>
+          <a href="#serviceForm" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Get Quote</a>
         </div>
       </nav>
     `;
