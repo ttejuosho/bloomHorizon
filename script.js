@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = Object.fromEntries(formData);
 
       try {
-        const response = await fetch("https://formspree.io/f/xjvnqplb", {
+        const response = await fetch("https://formspree.io/f/mwpaevkb", {
           // Replace with your Formspree ID
           method: "POST",
           headers: {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ...data,
             _subject: "New Service Request from Bloom Horizon Website",
             _replyto: data["service-email"],
-            _to: "support@bloomhorizonservices.com",
+            _to: "ttejuosho@outlook.com",
           }),
         });
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = Object.fromEntries(formData);
 
       try {
-        const response = await fetch("https://formspree.io/f/xjvnqplb", {
+        const response = await fetch("https://formspree.io/f/mwpaevkb", {
           // Replace with your Formspree ID
           method: "POST",
           headers: {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ...data,
             _subject: "New Contact Form Submission from Bloom Horizon Website",
             _replyto: data.email,
-            _to: "support@bloomhorizonservices.com",
+            _to: "ttejuosho@outlook.com",
           }),
         });
 
@@ -167,3 +167,44 @@ document.addEventListener("DOMContentLoaded", () => {
     el.style.opacity = "0";
   });
 });
+
+// const form = document.getElementById("contactForm");
+// const formStatus = document.getElementById("formStatus");
+
+// form.addEventListener("submit", async (e) => {
+//   e.preventDefault();
+
+//   const submitBtn = form.querySelector(".submit-btn");
+//   submitBtn.disabled = true;
+//   submitBtn.textContent = "Sending...";
+//   formStatus.textContent = "";
+//   formStatus.className = "form-status";
+
+//   const formData = new FormData(form);
+
+//   try {
+//     const response = await fetch("https://formspree.io/f/xldpwjoo", {
+//       method: "POST",
+//       body: formData,
+//       headers: {
+//         Accept: "application/json",
+//       },
+//     });
+
+//     if (response.ok) {
+//       formStatus.textContent =
+//         "Thank you for reaching out. We'll be in touch soon.";
+//       formStatus.className = "form-status success";
+//       form.reset();
+//     } else {
+//       throw new Error("Form submission failed");
+//     }
+//   } catch (error) {
+//     formStatus.textContent =
+//       "Something went wrong. Please try again or email us directly.";
+//     formStatus.className = "form-status error";
+//   } finally {
+//     submitBtn.disabled = false;
+//     submitBtn.textContent = "Submit";
+//   }
+// });
