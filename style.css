@@ -34,14 +34,15 @@ body {
 
 .btn-primary {
   color: #fff;
-  background-color: #16a34a;
-  border-color: #16a34a;
+  background-color: #0fa0ee;
+  border-color: #0fa0ee;
 }
 
 .btn-primary:hover {
-  background-color: #15803d;
-  border-color: #15803d;
+  background-color: #0c8bcc;
+  border-color: #0c8bcc;
 }
+
 /* Tab Styles */
 .tab-button {
   transition: all 0.3s ease;
@@ -51,8 +52,8 @@ body {
 }
 
 .tab-button.active {
-  color: #166534;
-  border-bottom: 2px solid #166534;
+  color: #0fa0ee;
+  border-bottom: 2px solid #0fa0ee;
 }
 
 .tab-content {
@@ -74,6 +75,7 @@ body {
     transform: translateY(0);
   }
 }
+
 /* Form Styles */
 .form-control {
   display: block;
@@ -90,5 +92,23 @@ body {
 }
 
 .form-control:focus {
-  border-color: #86efac;
+  border-color: #0fa0ee;
+  box-shadow: 0 0 0 3px rgba(15, 160, 238, 0.3);
+}
+
+/* Custom Accent Overrides */
+:root {
+  --accent-color: #0fa0ee;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.border-accent {
+  border-color: var(--accent-color) !important;
 }

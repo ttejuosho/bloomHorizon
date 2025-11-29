@@ -2,14 +2,19 @@ class CustomFooter extends HTMLElement {
   connectedCallback() {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
+      <!-- Load Font Awesome inside Shadow DOM -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      />
       <style>
         :host {
           display: block;
-          background: #166534;
+          background: #09537bff;
           color: white;
           padding: 2rem 0;
         }
-.footer-content {
+        .footer-content {
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 2rem;
@@ -25,12 +30,12 @@ class CustomFooter extends HTMLElement {
           margin-bottom: 1rem;
         }
         .footer-logo-icon {
-          color: #86efac;
+          color: #ffffff;
           margin-right: 0.5rem;
         }
         .footer-description {
           max-width: 300px;
-          color: #d1fae5;
+          color: #ffffff;
           margin-bottom: 1.5rem;
         }
         .footer-links {
@@ -53,12 +58,12 @@ class CustomFooter extends HTMLElement {
           margin-bottom: 0.5rem;
         }
         .footer-column a {
-          color: #d1fae5;
+          color: #ffffff;
           text-decoration: none;
           transition: color 0.3s;
         }
         .footer-column a:hover {
-          color: white;
+          color: #0fa0ee;
         }
         .social-links {
           display: flex;
@@ -75,9 +80,11 @@ class CustomFooter extends HTMLElement {
           border-radius: 50%;
           color: white;
           transition: background 0.3s;
+          font-size: 1.2rem;
         }
         .social-links a:hover {
           background: rgba(255,255,255,0.2);
+          color: #0fa0ee;
         }
         .copyright {
           grid-column: 1 / -1;
@@ -85,7 +92,7 @@ class CustomFooter extends HTMLElement {
           padding-top: 2rem;
           margin-top: 2rem;
           border-top: 1px solid rgba(255,255,255,0.1);
-          color: #d1fae5;
+          color: #ffffff;
           font-size: 0.875rem;
         }
         @media (min-width: 768px) {
@@ -94,6 +101,7 @@ class CustomFooter extends HTMLElement {
           }
         }
       </style>
+
       <div class="footer-content">
         <div class="footer-about">
           <div class="footer-logo">
@@ -104,12 +112,13 @@ class CustomFooter extends HTMLElement {
             Delivering sustainable transportation solutions for a greener tomorrow.
           </p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+
         <div class="footer-links">
           <div class="footer-column">
             <h3>Services</h3>
@@ -139,6 +148,7 @@ class CustomFooter extends HTMLElement {
             </ul>
           </div>
         </div>
+
         <div class="copyright">
           © ${new Date().getFullYear()} Bloom Horizon Services. All rights reserved.
         </div>
@@ -146,4 +156,5 @@ class CustomFooter extends HTMLElement {
     `;
   }
 }
+
 customElements.define("custom-footer", CustomFooter);

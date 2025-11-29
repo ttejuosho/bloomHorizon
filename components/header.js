@@ -24,11 +24,11 @@ class CustomHeader extends HTMLElement {
           align-items: center;
           font-size: 1.5rem;
           font-weight: bold;
-          color: #166534;
+          color: #09537bff;
           text-decoration: none;
         }
         .logo-icon {
-          color: #16a34a;
+          color: #09537bff;
           margin-right: 0.5rem;
         }
         .nav-links {
@@ -36,14 +36,14 @@ class CustomHeader extends HTMLElement {
           gap: 2rem;
         }
         a {
-          color: #166534;
+          color: #09537bff;
           text-decoration: none;
           font-weight: 500;
           transition: color 0.3s;
           position: relative;
         }
         a:hover {
-          color: #16a34a;
+          color: #0d6b9dff;
         }
         a.active:after {
           content: '';
@@ -52,13 +52,13 @@ class CustomHeader extends HTMLElement {
           left: 0;
           width: 100%;
           height: 2px;
-          background: #16a34a;
+          background: #09537bff;
         }
         .mobile-menu-btn {
           display: none;
           background: none;
           border: none;
-          color: #166534;
+          color: #09537bff;
           font-size: 1.5rem;
           cursor: pointer;
         }
