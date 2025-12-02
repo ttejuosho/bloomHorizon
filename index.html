@@ -19,7 +19,7 @@
 
     <main class="container mx-auto px-4 py-20">
       <!-- Hero Section -->
-      <section class="hero-section mb-20">
+      <section id="heroSection" class="hero-section mb-20">
         <div class="bg-[#e6f6fe] rounded-xl p-8 md:p-12 lg:p-16">
           <h1
             class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0fa0ee] mb-6"
@@ -27,8 +27,11 @@
             Sustainable Transportation Solutions
           </h1>
           <p class="text-xl text-[#0d8acb] mb-8 max-w-2xl">
-            Delivering eco-friendly logistics with care for our planet and your
-            business needs.
+            Our mission is simple: to deliver safe, punctual, and comfortable transportation that gives parents peace of mind and supports students’ daily success.
+            With a team of trained, background-checked drivers and a fleet of well-maintained vehicles equipped with modern safety features, we ensure every ride meets the highest standards. 
+            Whether it’s daily school routes, after-school programs, or special events, we tailor our services to meet the unique needs of each community we serve.
+            At Bloom Horizon, safety isn’t just a priority — it’s the foundation of everything we do. 
+            We continuously invest in technology, driver training, and service improvements to keep students protected and parents informed.
           </p>
 
           <a
@@ -41,7 +44,7 @@
       </section>
 
       <!-- Services Section -->
-      <section class="services-section mb-20">
+      <section id="servicesSection" class="services-section mb-20">
         <h2 class="text-3xl font-bold text-[#0fa0ee] mb-12 text-center">
           Our Services
         </h2>
@@ -52,10 +55,9 @@
             <div class="text-[#0fa0ee] text-4xl mb-4">
               <i class="fas fa-truck"></i>
             </div>
-            <h3 class="text-xl font-bold mb-3">Freight Transportation</h3>
+            <h3 class="text-xl font-bold mb-3">Daily Home-to-School Shuttles</h3>
             <p class="text-gray-600">
-              Reliable and efficient freight services with real-time tracking
-              and monitoring.
+              Safe, reliable pick-up and drop-off services from students’ homes to their schools and back, following fixed routes and schedules.
             </p>
           </div>
           <div
@@ -64,9 +66,9 @@
             <div class="text-[#0fa0ee] text-4xl mb-4">
               <i class="fas fa-leaf"></i>
             </div>
-            <h3 class="text-xl font-bold mb-3">Eco-Friendly Solutions</h3>
+            <h3 class="text-xl font-bold mb-3">Field Trip & Excursions</h3>
             <p class="text-gray-600">
-              Sustainable transport options with reduced carbon footprint.
+              Comfortable, well-equipped shuttles for school-organized trips, educational tours, competitions, and events.
             </p>
           </div>
           <div
@@ -75,10 +77,43 @@
             <div class="text-[#0fa0ee] text-4xl mb-4">
               <i class="fas fa-warehouse"></i>
             </div>
-            <h3 class="text-xl font-bold mb-3">Warehousing</h3>
+            <h3 class="text-xl font-bold mb-3">Private Group & Events</h3>
             <p class="text-gray-600">
-              Secure storage solutions with climate-controlled options
-              available.
+              Transportation for groups attending camps, church activities, academic events, or weekend programs etc.
+            </p>
+          </div>
+          <div
+            class="bg-white mb-5 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div class="text-[#0fa0ee] text-4xl mb-4">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">School Shuttle Services</h3>
+            <p class="text-gray-600">
+              Reliable and efficient shuttle services with real-time tracking
+              and monitoring.
+            </p>
+          </div>
+          <div
+            class="bg-white mb-5 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div class="text-[#0fa0ee] text-4xl mb-4">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Emergency/On-Demand Bookings</h3>
+            <p class="text-gray-600">
+              Flexible, last-minute transportation options for unexpected schedule changes, missed buses, or temporary service needs.
+            </p>
+          </div>
+          <div
+            class="bg-white mb-5 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div class="text-[#0fa0ee] text-4xl mb-4">
+              <i class="fas fa-warehouse"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Logistics</h3>
+            <p class="text-gray-600">
+              Secure general transportation solutions for goods and people.
             </p>
           </div>
         </div>
@@ -88,10 +123,10 @@
       <section id="serviceRequestSection" class="service-request-section mb-20">
         <div class="bg-white rounded-xl shadow-md overflow-hidden">
           <div class="p-8 md:p-12">
-            <h2 class="text-3xl font-bold text-[#0fa0ee] mb-6">
+            <h2 class="text-3xl font-bold text-center text-[#0fa0ee] mb-6">
               Service Request
             </h2>
-            <form id="serviceRequestForm" class="space-y-6">
+            <form id="serviceRequestForm" class="space-y-6 w-full md:w-4/5 lg:w-4/5 mx-auto">
               <div>
                 <label for="service-name" class="block text-gray-700 mb-2"
                   >Full Name</label
@@ -260,56 +295,14 @@
 
               <button
                 type="submit"
-                class="service-request-form-submit-btn bg-[#0fa0ee] hover:bg-[#0d8acb] text-white font-bold py-3 px-8 rounded-lg transition duration-300 w-full"
+                class="service-request-form-submit-btn bg-[#0fa0ee] hover:bg-[#0d8acb] 
+    text-white font-bold py-3 px-8 rounded-lg transition duration-300 
+    w-full md:w-4/5 lg:w-4/5 mx-auto block text-center"
               >
                 Submit Request
               </button>
               <div id="serviceRequestFormStatus" class="sr-form-status"></div>
             </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section id="services" class="services-section mb-20">
-        <h2 class="text-3xl font-bold text-[#0fa0ee] mb-12 text-center">
-          Our Services
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="bg-white mb-5 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
-          >
-            <div class="text-[#0fa0ee] text-4xl mb-4">
-              <i class="fas fa-truck"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">School Shuttle Services</h3>
-            <p class="text-gray-600">
-              Reliable and efficient shuttle services with real-time tracking
-              and monitoring.
-            </p>
-          </div>
-          <div
-            class="bg-white mb-5 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
-          >
-            <div class="text-[#0fa0ee] text-4xl mb-4">
-              <i class="fas fa-leaf"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Eco-Friendly Solutions</h3>
-            <p class="text-gray-600">
-              Sustainable transport options with reduced carbon footprint.
-            </p>
-          </div>
-          <div
-            class="bg-white mb-5 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
-          >
-            <div class="text-[#0fa0ee] text-4xl mb-4">
-              <i class="fas fa-warehouse"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Logistics</h3>
-            <p class="text-gray-600">
-              Secure storage solutions with climate-controlled options
-              available.
-            </p>
           </div>
         </div>
       </section>
