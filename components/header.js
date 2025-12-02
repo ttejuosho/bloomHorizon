@@ -95,7 +95,7 @@ class CustomHeader extends HTMLElement {
           <a href="#servicesSection">Services</a>
           <a href="#heroSection">About</a>
           <a href="#contactSection" class="active">Contact</a>
-          <a href="#serviceRequestSection" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Get Quote</a>
+          <a href="#serviceRequestSection" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Book Trip</a>
         </div>
       </nav>
     `;
