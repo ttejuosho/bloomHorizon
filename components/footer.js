@@ -109,7 +109,7 @@ class CustomFooter extends HTMLElement {
             Bloom Horizon Services
           </div>
           <p class="footer-description">
-            Delivering sustainable transportation solutions for a greener tomorrow.
+            Founded with a commitment to excellence in student transportation, we provide dependable shuttle services that families and schools can trust.
           </p>
           <div class="social-links">
             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -123,28 +123,22 @@ class CustomFooter extends HTMLElement {
           <div class="footer-column">
             <h3>Services</h3>
             <ul>
-              <li><a href="#">School Shuttle Services</a></li>
-              <li><a href="#">Private Transportation</a></li>
-              <li><a href="#">Goods Transport</a></li>
-              <li><a href="#">Logistics</a></li>
+              <li>School Shuttle Services</li>
+              <li>Private Transportation</li>
+              <li>Goods Transportation</li>
+              <li>General Logistics</li>
             </ul>
           </div>
           <div class="footer-column">
             <h3>Company</h3>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Sustainability</a></li>
-              <li><a href="#">News</a></li>
+              <li><a href="#heroSection">About Us</a></li>
             </ul>
           </div>
           <div class="footer-column">
             <h3>Support</h3>
             <ul>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Tracking</a></li>
-              <li><a href="#">Terms</a></li>
+              <li><a href="#contactSection">Contact Us</a></li>
             </ul>
           </div>
         </div>
