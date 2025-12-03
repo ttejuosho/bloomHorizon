@@ -1,112 +1,45 @@
 class CustomHeader extends HTMLElement {
   connectedCallback() {
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.innerHTML = `
-      <style>
-        :host {
-          display: block;
-          position: sticky;
-          top: 0;
-          z-index: 50;
-          background: white;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        nav {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 1rem 2rem;
-        }
-        .logo {
-          display: flex;
-          align-items: center;
-          font-size: 1.5rem;
-          font-weight: bold;
-          color: #09537bff;
-          text-decoration: none;
-        }
-        .logo-icon {
-          color: #09537bff;
-          margin-right: 0.5rem;
-        }
-        .nav-links {
-          display: flex;
-          gap: 2rem;
-        }
-        a {
-          color: #09537bff;
-          text-decoration: none;
-          font-weight: 500;
-          transition: color 0.3s;
-          position: relative;
-        }
-        a:hover {
-          color: #0d6b9dff;
-        }
-        a.active:after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: #09537bff;
-        }
-        .mobile-menu-btn {
-          display: none;
-          background: none;
-          border: none;
-          color: #09537bff;
-          font-size: 1.5rem;
-          cursor: pointer;
-        }
-        @media (max-width: 768px) {
-          .mobile-menu-btn {
-            display: block;
-          }
-          .nav-links {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            flex-direction: column;
-            padding: 1rem;
-            gap: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-          }
-          .nav-links.active {
-            display: flex;
-          }
-        }
-      </style>
-      <nav>
-        <a href="/" class="logo">
-          <i class="fas fa-leaf logo-icon"></i>
-          Bloom Horizon
-        </a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links" id="navLinks">
-          <a href="#servicesSection">Services</a>
-          <a href="#heroSection">About</a>
-          <a href="#contactSection" class="active">Contact</a>
-          <a href="#serviceRequestSection" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Book Trip</a>
+    this.innerHTML = `
+      <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div class="text-2xl font-bold text-[#0fa0ee]">
+            Bloom Horizon
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" class="md:hidden text-3xl text-[#0fa0ee]">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Desktop Nav -->
+          <ul class="hidden md:flex space-x-8 text-[#0fa0ee] font-semibold">
+            <li><a href="#heroSection" class="hover:text-[#0d8acb]">Home</a></li>
+            <li><a href="#servicesSection" class="hover:text-[#0d8acb]">Services</a></li>
+            <li><a href="#serviceRequestSection" class="hover:text-[#0d8acb]">Request</a></li>
+            <li><a href="#contactSection" class="hover:text-[#0d8acb]">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu"
+          class="hidden md:hidden bg-white shadow-lg border-t border-gray-100">
+          <ul class="flex flex-col text-[#0fa0ee] font-semibold p-4 space-y-4">
+            <li><a href="#heroSection">Home</a></li>
+            <li><a href="#servicesSection">Services</a></li>
+            <li><a href="#serviceRequestSection">Request</a></li>
+            <li><a href="#contactSection">Contact</a></li>
+          </ul>
         </div>
-      </nav>
+      </header>
+
+      <script>
+        document.getElementById("mobileMenuBtn").onclick = () => {
+          document.getElementById("mobileMenu").classList.toggle("hidden");
+        };
+      </script>
     `;
-
-    // Mobile menu toggle
-    const mobileMenuBtn = this.shadowRoot.getElementById("mobileMenuBtn");
-    const navLinks = this.shadowRoot.getElementById("navLinks");
-
-    mobileMenuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
   }
 }
+
 customElements.define("custom-header", CustomHeader);
