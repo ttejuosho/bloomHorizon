@@ -32,13 +32,15 @@ class CustomHeader extends HTMLElement {
           </ul>
         </div>
       </header>
-
-      <script>
-        document.getElementById("mobileMenuBtn").onclick = () => {
-          document.getElementById("mobileMenu").classList.toggle("hidden");
-        };
-      </script>
     `;
+
+    // ✅ Attach event listener AFTER rendering innerHTML
+    const btn = this.querySelector("#mobileMenuBtn");
+    const menu = this.querySelector("#mobileMenu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
   }
 }
 
