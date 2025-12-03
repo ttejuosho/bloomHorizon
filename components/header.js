@@ -23,7 +23,7 @@ class CustomHeader extends HTMLElement {
 
         <!-- MOBILE MENU -->
         <div id="mobileMenu"
-          class="hidden md:hidden bg-white shadow-lg border-t border-gray-100">
+          class="hidden md:hidden absolute left-0 top-full w-full bg-white shadow-lg border-t border-gray-100 z-40">
           <ul class="flex flex-col text-[#0fa0ee] font-semibold p-4 space-y-4">
             <li><a href="#heroSection">Home</a></li>
             <li><a href="#servicesSection">Services</a></li>
@@ -34,7 +34,7 @@ class CustomHeader extends HTMLElement {
       </header>
     `;
 
-    // ✅ Attach event listener AFTER rendering innerHTML
+    // Attach listener AFTER HTML is inserted
     const btn = this.querySelector("#mobileMenuBtn");
     const menu = this.querySelector("#mobileMenu");
 
